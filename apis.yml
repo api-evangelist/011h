@@ -1,16 +1,28 @@
 aid: 011h
 name: 011h
-description: '011h is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 011h (011h Sustainable Construction S.L.) is a Barcelona-based construction technology company founded
+  in 2020 that designs and builds low-carbon residential, affordable-housing, flex-living and hospitality buildings
+  using an industrialized building system and a digital platform connecting factory, design and site. The company
+  combines standardized hybrid concrete/wood/steel prefabricated components, an integrated network of qualified
+  manufacturers, and an in-house software platform covering design, contracting and construction execution with
+  end-to-end traceability. It is a certified B Corporation and raised EUR 20M in October 2025 co-led by Ship2B Ventures
+  and CDTI. As of this profile 011h publishes no public developer program, API documentation or machine-readable
+  API contract; its software is an internal/customer-facing product rather than a platform API.
 url: https://raw.githubusercontent.com/api-evangelist/011h/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-05'
 modified: '2026-09-05'
 tags:
+- Construction
+- Construction Technology
+- Real Estate
+- Proptech
+- Sustainability
+- Building
+- Manufacturing
+- Spain
 - Company
 apis: []
 maintainers:
@@ -19,5 +31,37 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/011h-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/011h
+  url: https://011h.com/
+- type: GitHubOrganization
+  url: https://github.com/011h
+- type: LinkedIn
+  url: https://www.linkedin.com/company/011h/
+image: https://011h.com/assets/img/og-cover.jpg
+x-tier: profiled
+x-tier-reason: 'enrichment pass 2026-09-05: full contract discovery run, no public API surface found'
+x-enrichment:
+  date: '2026-09-05'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: '011h ships an internal construction platform, not a product API: 011h.com is a single-page marketing
+    site with no /developers, /docs or /api path, its GitHub org has zero public repositories, and api.011h.com
+    resolves to a Kong gateway that answers every probed path with ''no Route matched with those values''.'
+  evidence:
+  - url: https://011h.com/developers
+    status: 404
+  - url: https://api.011h.com/openapi.json
+    status: 404
+  - url: https://api.011h.com/
+    status: 404
+  - url: https://api.github.com/orgs/011h/repos
+    status: 200
+  - url: https://011h.com/.well-known/api-catalog
+    status: 404
+  checked: '2026-09-05'

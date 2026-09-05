@@ -1,0 +1,23 @@
+generated: '2026-09-05'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts; api.011h.com added from STEP 0b contract discovery
+  (DNS resolves, Kong gateway)
+hosts:
+- host: 011h.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Mar 13 23:59:59 2027 GMT
+  hsts: false
+- host: api.011h.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov  4 02:51:53 2026 GMT
+  hsts: false
+  note: Resolves to an AWS-hosted Kong API gateway that answers every probed path with {"message":"no Route matched
+    with those values"} (HTTP 404). No public routes, docs or spec are exposed anonymously.
+domains:
+- domain: 011h.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false
