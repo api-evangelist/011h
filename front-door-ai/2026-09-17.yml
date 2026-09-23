@@ -1,0 +1,25 @@
+# Front Door AI Index — 011h — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: 011h
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: 011h.com
+  final_host: 011h.com
+  ownership: own
+  owner: 011h
+  shares_host_with: null
+  inherited_from: null
+  verdict: silent
+  score: 0
+  host_score: 0
+  density: 0.0
+  words: 1683
+  tiers:
+    agentic: 0
+    core: 0
+    model: 0
+  ambiguous: 1
+  top_terms:
+    smart: 1
